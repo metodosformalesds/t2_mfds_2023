@@ -1,0 +1,24 @@
+<div class="horizontal-menu">
+    
+    <ul>
+        
+        <img alt="Card" src="assets/imagenes/logo.png" class="img">
+       
+        <li *ngFor="let item of items">
+            <a [routerLink]="item.routerLink" class="menu-item">
+            <i [ngClass]="item.icon"></i>
+            {{ item.label }}
+            </a>
+        </li>
+        <div style="margin-left: 600px;" class="card flex flex-wrap justify-content-center gap-3">
+            <span class="p-input-icon-right">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText [(ngModel)]="value" />
+            </span> 
+            <button pButton pRipple type="button" icon="pi pi-shopping-cart" class="p-button-rounded p-button-text p-button-plain p-button-lg"></button>
+            <button pButton pRipple type="button"  icon="pi pi-user" class="p-button-rounded p-button-text p-button-plain p-button-lg"></button>
+            <button  pButton pRipple type="button" label="vender" class="p-button-secondary"></button>
+         </div>
+
+    </ul>
+  </div>

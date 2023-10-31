@@ -18,6 +18,8 @@ import { ButtonModule } from 'primeng/button';
 import { AppRoutingModule } from './app-routing.module';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { MenuModule } from 'primeng/menu';
 
 
 
@@ -25,7 +27,8 @@ import { InputTextModule } from 'primeng/inputtext';
   declarations: [
     AppComponent,
     LoginComponent,
-    InicioComponent
+    InicioComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { InputTextModule } from 'primeng/inputtext';
     InputTextModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MenuModule
     
     
     
