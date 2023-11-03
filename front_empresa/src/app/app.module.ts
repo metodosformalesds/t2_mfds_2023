@@ -20,6 +20,7 @@ import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { MenuModule } from 'primeng/menu';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 
@@ -28,7 +29,8 @@ import { MenuModule } from 'primeng/menu';
     AppComponent,
     LoginComponent,
     InicioComponent,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

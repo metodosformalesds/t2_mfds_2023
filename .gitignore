@@ -203,9 +203,6 @@ Thumbs.db
 *.js
 *.map
 
-# Angular CLI configuration files
-angular.json
-angular-cli.json
 
 # Jest configuration file
 jest.config.js
