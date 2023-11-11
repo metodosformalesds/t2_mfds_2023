@@ -26,6 +26,7 @@ class Usuario(models.Model):
     apellido_paterno=models.CharField(max_length=80)
     apellido_materno=models.CharField(max_length=80)
     edad=models.IntegerField(null=True)
+    email = models.EmailField(max_length=255, unique=True, null=True)
     sexo= models.ForeignKey(CatalogoSexo, on_delete=models.CASCADE, related_name='usuario_catalogosexo', blank=True, null=True)
 
     usuario_creacion = models.ForeignKey(User, on_delete=models.CASCADE, editable=False, related_name='usuario_creacion_usuario', blank=True, null=True,)

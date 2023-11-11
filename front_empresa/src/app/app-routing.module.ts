@@ -23,6 +23,7 @@ import { KodomoComponent } from './paginas/kodomo/kodomo.component';
 import { ShonenComponent } from './paginas/shonen/shonen.component';
 import { ShojoComponent } from './paginas/shojo/shojo.component';
 import { SeinenComponent } from './paginas/seinen/seinen.component';
+import { RegistroComponent } from './paginas/registro/registro.component';
 
 const routes: Routes = [
 
@@ -52,6 +53,7 @@ const routes: Routes = [
 
 
  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+ {path:'registro',component:RegistroComponent},
 
 ];
 

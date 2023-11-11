@@ -61,5 +61,8 @@ export class LoginComponent {
     this.formLogIn.get(`${formControl}`)?.touched);
   }
 
+  registroPatch() {
+    this.router.navigate(['/registro'])
+  }
 
 }
