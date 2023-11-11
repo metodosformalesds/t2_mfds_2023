@@ -23,6 +23,13 @@ import { MenuModule } from 'primeng/menu';
 import { FooterComponent } from './shared/footer/footer.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
 import { ContactoComponent } from './paginas/contacto/contacto.component';
+import { MisvisComponent } from './paginas/misvis/misvis.component';
+import { ComoVendoComponent } from './paginas/como-vendo/como-vendo.component';
+import { ComoComprarComponent } from './paginas/como-comprar/como-comprar.component';
+import { PoliticaDeDevolucionesComponent } from './paginas/politica-de-devoluciones/politica-de-devoluciones.component';
+import { PreguntasFrecuentesComponent } from './paginas/preguntas-frecuentes/preguntas-frecuentes.component';
+import { QuienesSomosComponent } from './paginas/quienes-somos/quienes-somos.component';
+import { TerminosYCondicionesComponent } from './paginas/terminos-y-condiciones/terminos-y-condiciones.component';
 
 
 
@@ -34,7 +41,14 @@ import { ContactoComponent } from './paginas/contacto/contacto.component';
     SidebarComponent,
     FooterComponent,
     RegistroComponent,
-    ContactoComponent
+    ContactoComponent,
+    MisvisComponent,
+    ComoVendoComponent,
+    ComoComprarComponent,
+    PoliticaDeDevolucionesComponent,
+    PreguntasFrecuentesComponent,
+    QuienesSomosComponent,
+    TerminosYCondicionesComponent
   ],
   imports: [
     BrowserModule,
