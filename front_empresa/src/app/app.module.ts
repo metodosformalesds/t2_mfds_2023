@@ -21,6 +21,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { MenuModule } from 'primeng/menu';
 import { FooterComponent } from './shared/footer/footer.component';
+import { RegistroComponent } from './paginas/registro/registro.component';
+import { ContactoComponent } from './paginas/contacto/contacto.component';
 
 
 
@@ -30,7 +32,9 @@ import { FooterComponent } from './shared/footer/footer.component';
     LoginComponent,
     InicioComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    RegistroComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
