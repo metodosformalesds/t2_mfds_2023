@@ -30,6 +30,19 @@ import { PoliticaDeDevolucionesComponent } from './paginas/politica-de-devolucio
 import { PreguntasFrecuentesComponent } from './paginas/preguntas-frecuentes/preguntas-frecuentes.component';
 import { QuienesSomosComponent } from './paginas/quienes-somos/quienes-somos.component';
 import { TerminosYCondicionesComponent } from './paginas/terminos-y-condiciones/terminos-y-condiciones.component';
+import { MiBalanceComponent } from './paginas/mi-balance/mi-balance.component';
+import { FantasiaLibrosComponent } from './paginas/fantasia-libros/fantasia-libros.component';
+import { ClasicosLibrosComponent } from './paginas/clasicos-libros/clasicos-libros.component';
+import { RomanceLibrosComponent } from './paginas/romance-libros/romance-libros.component';
+import { HispanoamericanosLibrosComponent } from './paginas/hispanoamericanos-libros/hispanoamericanos-libros.component';
+import { AventurasComicsComponent } from './paginas/aventuras-comics/aventuras-comics.component';
+import { ComediasComicComponent } from './paginas/comedias-comic/comedias-comic.component';
+import { RomanceComicComponent } from './paginas/romance-comic/romance-comic.component';
+import { BelicaComicComponent } from './paginas/belica-comic/belica-comic.component';
+import { KodomoComponent } from './paginas/kodomo/kodomo.component';
+import { ShonenComponent } from './paginas/shonen/shonen.component';
+import { ShojoComponent } from './paginas/shojo/shojo.component';
+import { SeinenComponent } from './paginas/seinen/seinen.component';
 
 
 
@@ -48,7 +61,20 @@ import { TerminosYCondicionesComponent } from './paginas/terminos-y-condiciones/
     PoliticaDeDevolucionesComponent,
     PreguntasFrecuentesComponent,
     QuienesSomosComponent,
-    TerminosYCondicionesComponent
+    TerminosYCondicionesComponent,
+    MiBalanceComponent,
+    FantasiaLibrosComponent,
+    ClasicosLibrosComponent,
+    RomanceLibrosComponent,
+    HispanoamericanosLibrosComponent,
+    AventurasComicsComponent,
+    ComediasComicComponent,
+    RomanceComicComponent,
+    BelicaComicComponent,
+    KodomoComponent,
+    ShonenComponent,
+    ShojoComponent,
+    SeinenComponent
   ],
   imports: [
     BrowserModule,
