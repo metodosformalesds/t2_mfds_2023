@@ -96,9 +96,10 @@
               "src/styles.scss"
             ],
             "scripts": []
+
+            }
           }
         }
       }
     }
   }
-}
