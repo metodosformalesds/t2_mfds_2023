@@ -50,10 +50,10 @@ const routes: Routes = [
  {path:'shonen',component:ShonenComponent},
  {path:'shojo',component:ShojoComponent},
  {path:'seinen',component:SeinenComponent},
-
+ {path:'registro',component:RegistroComponent},
 
  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
- {path:'registro',component:RegistroComponent},
+ 
 
 ];
 
