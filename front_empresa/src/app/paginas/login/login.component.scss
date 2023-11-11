@@ -31,4 +31,9 @@ margin-left: 20%;
   .p-button-secondary {
     background-color: black;
     color: white; /* Cambia el color del texto a blanco para que sea visible en el fondo negro */
+  }
+
+  .hover-effect:hover {
+    color: purple; /* Cambia 'YourColor' al color que desees */
+    /* Otros estilos que desees aplicar al hacer hover */
 }
