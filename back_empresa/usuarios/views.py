@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .models import Usuario, CatalogoSexo
-from .serializers import UsuarioSerializer
+from .serializers import UsuarioSerializer, UnUsuarioSerializer
 
 from django.contrib.auth import get_user_model
 from rest_framework import status
@@ -11,6 +11,12 @@ from rest_framework.views import APIView
 class ListarUsuarios(generics.ListAPIView):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
+
+from rest_framework import generics
+
+class VerUsuario(generics.RetrieveAPIView):
+    queryset = Usuario.objects.all()
+    serializer_class = UnUsuarioSerializer
 
 
 

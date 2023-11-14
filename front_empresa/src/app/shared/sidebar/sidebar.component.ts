@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {MenuModule} from 'primeng/menu';
 import {MenuItem} from 'primeng/api';
 import { Router } from '@angular/router';
+import { RegistroService } from 'src/app/services/registro/registro.service';
 
 @Component({
   selector: 'shared-sidebar',
@@ -14,7 +15,7 @@ export class SidebarComponent {
 
   value: string | undefined;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, usuario:RegistroService) { }
 
   ngOnInit() {
     this.itemsUser = [
