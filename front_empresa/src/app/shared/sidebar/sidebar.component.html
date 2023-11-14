@@ -10,7 +10,7 @@
             {{ item.label }}
             </a>
         </li>
-        <p style="margin-left: 350px;" class="additional-paragraph">Tu nuevo contenido aquí</p>
+        <p *ngIf="mensaje" style="margin-left: 350px;" class="additional-paragraph">{{ mensaje }}</p>
       
                
         <div style="margin-left: 100px;" class="card flex flex-wrap justify-content-center gap-3">

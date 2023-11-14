@@ -3,6 +3,7 @@ import { FormControl,FormGroup, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import * as jwtDecode from 'jwt-decode';
 
 
 @Component({
@@ -38,7 +39,7 @@ export class LoginComponent {
           
           localStorage.setItem('access_token', accessToken);
           localStorage.setItem('refresh_token', refreshToken);
-  
+          
          
          
           this.router.navigate(['/inicio']);
