@@ -21,7 +21,7 @@ export class SidebarComponent {
       {label: 'Ver Perfil'},
       {label:'Mi balance',command: () => this.navegar('/mi-balance')},
       {label:'Configuracion'},
-      {label:'Salir'}
+      {label:'Iniciar sesion',command: () => this.navegar('/login')}
     ]
   }
 
