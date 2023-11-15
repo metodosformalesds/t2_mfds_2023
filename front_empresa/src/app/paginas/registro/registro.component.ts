@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegistroService } from 'src/app/services/registro/registro.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -23,7 +24,7 @@ export class RegistroComponent {
 
 
 
-  constructor(private registroService: RegistroService, private router: Router) { }
+  constructor(private login:LoginService, private registroService: RegistroService, private router: Router) { }
 
   registroBoton(form: any) {
     console.log('Valores del formulario:', this.registroForm.value);
@@ -32,7 +33,17 @@ export class RegistroComponent {
   
     this.registroService.registro(this.registroForm.value).subscribe(
       (res) => {
-        this.router.navigate(['/inicio']);
+        this.login.login(this.registroForm.value).subscribe(
+          (response) => {
+            const accessToken = response.access;
+            const refreshToken = response.refresh;
+           console.log('funciona');
+            
+            localStorage.setItem('access_token', accessToken);
+            localStorage.setItem('refresh_token', refreshToken);
+            this.router.navigate(['/inicio']);
+          })
+        
       },
       (error) => {
         console.error('Error al registrarse:', error);
@@ -41,6 +52,8 @@ export class RegistroComponent {
         this.mostrarErrorCampos = true;
       }
     );
+
+  
   }
   
 

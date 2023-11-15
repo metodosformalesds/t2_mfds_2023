@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-// // import { jwtDecode } from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 @Injectable({
   providedIn: 'root'
 })
@@ -31,11 +31,11 @@ export class LoginService {
 
     if (accessToken) {
       try {
-        // const decodedToken = jwtDecode(accessToken);
-        // console.log(decodedToken);
-        // decodedToken;
+        const decodedToken = jwtDecode(accessToken);
+        console.log(decodedToken);
+        decodedToken;
         
-        // return decodedToken;
+        return decodedToken;
       } catch (error) {
         console.error('Error al decodificar el token:', error);
       }
