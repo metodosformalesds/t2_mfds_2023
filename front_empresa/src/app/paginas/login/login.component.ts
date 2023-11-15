@@ -3,7 +3,7 @@ import { FormControl,FormGroup, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
-import * as jwtDecode from 'jwt-decode';
+//import * as jwtDecode from 'jwt-decode';
 
 
 @Component({

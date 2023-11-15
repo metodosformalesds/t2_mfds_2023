@@ -3,7 +3,7 @@ import {MenuModule} from 'primeng/menu';
 import {MenuItem} from 'primeng/api';
 import { Router } from '@angular/router';
 import { RegistroService } from 'src/app/services/registro/registro.service';
-import { jwtDecode } from 'jwt-decode';
+// import { jwtDecode } from 'jwt-decode';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
