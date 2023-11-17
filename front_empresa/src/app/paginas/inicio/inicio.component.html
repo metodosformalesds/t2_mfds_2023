@@ -26,14 +26,17 @@
     </div>
 </div>
 <div class="sect-4">
-    <h1> Joyitas de la semana </h1>
+    <h1>Joyitas de la semana</h1>
 
     <div class="top">
-        <div class=""></div>
-        <div class="" ></div>
-        <div class="" ></div>
+      <div *ngFor="let product of products" class="product-item">
+        <h2>{{ product.nombre }}</h2>
+        <p>Precio: {{ product.precio }}</p>
+        <img [src]="product.imagen" alt="{{ product.nombre }}">
+        <!-- Agrega más campos según tus necesidades -->
+      </div>
     </div>
-</div>
+  </div>
 <div class="sect-5">
     <div class="img-slogan">
     </div>

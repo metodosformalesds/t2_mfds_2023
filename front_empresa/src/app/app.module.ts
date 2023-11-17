@@ -43,6 +43,13 @@ import { KodomoComponent } from './paginas/kodomo/kodomo.component';
 import { ShonenComponent } from './paginas/shonen/shonen.component';
 import { ShojoComponent } from './paginas/shojo/shojo.component';
 import { SeinenComponent } from './paginas/seinen/seinen.component';
+import { VenderComponent } from './paginas/vender/vender.component';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {DropdownModule} from 'primeng/dropdown';
+import {FileUploadModule} from 'primeng/fileupload';
+import {MultiSelectModule} from 'primeng/multiselect';
+
 
 
 
@@ -74,7 +81,8 @@ import { SeinenComponent } from './paginas/seinen/seinen.component';
     KodomoComponent,
     ShonenComponent,
     ShojoComponent,
-    SeinenComponent
+    SeinenComponent,
+    VenderComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +94,13 @@ import { SeinenComponent } from './paginas/seinen/seinen.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MenuModule
+    MenuModule,
+    InputNumberModule,
+    InputTextareaModule,
+    DropdownModule,
+    FileUploadModule,
+    MultiSelectModule,
+    
     
     
     

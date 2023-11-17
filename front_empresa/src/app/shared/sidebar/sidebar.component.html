@@ -2,7 +2,7 @@
     
     <ul>
         
-        <img alt="Card" src="assets/imagenes/logo.png" class="img">
+        <img routerLink="/inicio" alt="Card" src="assets/imagenes/logo.png" class="img">
        
         <li *ngFor="let item of items">
             <a [routerLink]="item.routerLink" class="menu-item">
@@ -22,7 +22,7 @@
             <button pButton pRipple type="button" icon="pi pi-shopping-cart" class="p-button-rounded p-button-text p-button-plain p-button-lg"></button>
             <button pButton  pRipple type="button"  icon="pi pi-user" (click)="menu.toggle($event)" class="p-button-rounded p-button-text p-button-plain p-button-lg"></button>
             <p-menu #menu [popup]="true" [model]="itemsUser"></p-menu>
-            <button  pButton pRipple type="button" label="vender" class="p-button-secondary"></button>
+            <button  routerLink="/vender" pButton pRipple type="button" label="vender" class="p-button-secondary"></button>
          </div>
 
     </ul>

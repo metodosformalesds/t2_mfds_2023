@@ -24,6 +24,7 @@ import { ShonenComponent } from './paginas/shonen/shonen.component';
 import { ShojoComponent } from './paginas/shojo/shojo.component';
 import { SeinenComponent } from './paginas/seinen/seinen.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
+import { VenderComponent } from './paginas/vender/vender.component';
 
 const routes: Routes = [
 
@@ -51,6 +52,7 @@ const routes: Routes = [
  {path:'shojo',component:ShojoComponent},
  {path:'seinen',component:SeinenComponent},
  {path:'registro',component:RegistroComponent},
+ {path:'vender',component:VenderComponent},
 
  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
  
