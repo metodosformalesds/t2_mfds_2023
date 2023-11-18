@@ -4,17 +4,19 @@
         
         <img routerLink="/inicio" alt="Card" src="assets/imagenes/logo.png" class="img">
        
-        <li *ngFor="let item of items">
+        <!-- <li *ngFor="let item of items">
             <a [routerLink]="item.routerLink" class="menu-item">
             <i [ngClass]="item.icon"></i>
             {{ item.label }}
             </a>
-        </li>
+        </li> 
+         -->
+        <button pButton  pRipple type="button"  (click)="menu.toggle($event)" class="p-button-invisible p-button-text p-button-plain p-button-lg" style="margin: 1rem;"> Libros </button>
+        <p-menu #menu [popup]="true" [model]="items"></p-menu>
         <p *ngIf="mensaje" style="margin-left: 350px;" class="additional-paragraph">{{ mensaje }}</p>
-      
-               
+
         <div style="margin-left: 100px;" class="card flex flex-wrap justify-content-center gap-3">
-            
+
             <span class="p-input-icon-right">
                 <i class="pi pi-search"></i>
                 <input type="text" pInputText [(ngModel)]="value" />

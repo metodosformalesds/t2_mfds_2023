@@ -17,6 +17,7 @@ export class SidebarComponent {
    usuario:any;
 
   itemsUser!: MenuItem[];
+  itemsLibros!: MenuItem[];
 
   value: string | undefined;
 
@@ -52,12 +53,20 @@ export class SidebarComponent {
         }
       }
     ]
+    this.itemsLibros = [
+      {label: 'Fantasia'},
+      {label:'Romance',command: () => this.navegar('/mi-balance')},
+      {label:'Clasicos'},
+      {label:'Fantasia'},
+     
+    ]
   
   }
 
 
   items: any[] = [
-    { label: 'Libros',  routerLink: '/clasicos-libros' },
+    { label: 'Libros',  routerLink: '/clasicos-libros' 
+  },
     { label: 'Comics',  routerLink: '/comedia-comics' },
     { label: 'Mangas',  routerLink: '/shojo' }
   ];
