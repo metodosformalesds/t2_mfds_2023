@@ -27,26 +27,28 @@ export class SidebarComponent {
     {
       label: 'Libros',
       items: [
-        { label: 'Fantasia', routerLink: '/shojo' },
-        { label: 'Clasicos', routerLink: '/shonen' },
-        { label: 'Romance', routerLink: '/seinen' },
-        { label: 'Hispanohablantes', routerLink: '/seinen' }
+        { label: 'Fantasia', routerLink: '/fantasia-libros' },
+        { label: 'Clasicos', routerLink: '/clasicos-libros' },
+        { label: 'Romance', routerLink: '/romance-libros' },
+        { label: 'Hispanoamericanos', routerLink: '/hispanoamericanos-libros' }
       ]
     },
     {
       label: 'Comics',
       items: [
-        { label: 'Superhéroes', routerLink: '/superheroes' },
-        { label: 'Comedia', routerLink: '/comedia' },
-        { label: 'Ciencia Ficción', routerLink: '/ciencia-ficcion' }
+        { label: 'Aventuras', routerLink: '/aventuras-comics' },
+        { label: 'Comedia', routerLink: '/comedias-comic' },
+        { label: 'Romance', routerLink: '/romance-comic' },
+        { label: 'Bélica', routerLink: '/belica-comic' }
       ]
     },
     {
-      label: 'Libros',
+      label: 'Mangas',
       items: [
-        { label: 'Ficción', routerLink: '/ficcion' },
-        { label: 'No Ficción', routerLink: '/no-ficcion' },
-        { label: 'Misterio', routerLink: '/misterio' }
+        { label: 'Kodomo', routerLink: '/kodomo' },
+        { label: 'Shonen', routerLink: '/shonen' },
+        { label: 'Shojo', routerLink: '/shojo' },
+        { label: 'Seinen', routerLink: '/seinen' }
       ]
     },
   ];

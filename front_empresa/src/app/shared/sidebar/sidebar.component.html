@@ -1,24 +1,24 @@
 <div class="horizontal-menu">
-    
+
     <ul>
-        
+
         <img routerLink="/inicio" alt="Card" src="assets/imagenes/logo.png" class="img">
-        <li *ngFor="let item of items" (click)="menu.toggle">
+        <li *ngFor="let item of items" class="list">
             <a *ngIf="!item.items" [routerLink]="item.routerLink">
               {{ item.label }}
             </a>
-            <a *ngIf="item.items" class="submenu">
+            <a *ngIf="item.items" class="submenu" >
               {{ item.label }}
               <ul>
                 <li *ngFor="let subItem of item.items">
-                  <a [routerLink]="subItem.routerLink">
+                  <a [routerLink]="subItem.routerLink" class="links">
                     {{ subItem.label }}
                   </a>
                 </li>
               </ul>
             </a>
           </li>
- 
+
         <p *ngIf="mensaje" style="margin-left: 350px;" class="additional-paragraph">{{ mensaje }}</p>
 
         <div style="margin-left: 100px;" class="card flex flex-wrap justify-content-center gap-3">
@@ -27,6 +27,7 @@
                 <i class="pi pi-search"></i>
                 <input type="text" pInputText [(ngModel)]="value" />
             </span>
+
             <button pButton pRipple type="button" icon="pi pi-shopping-cart" class="p-button-rounded p-button-text p-button-plain p-button-lg"></button>
             <button pButton  pRipple type="button"  icon="pi pi-user" (click)="menu.toggle($event)" class="p-button-rounded p-button-text p-button-plain p-button-lg"></button>
             <p-menu #menu [popup]="true" [model]="itemsUser"></p-menu>
