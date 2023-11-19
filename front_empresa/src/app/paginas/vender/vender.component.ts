@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FileUpload } from 'primeng/fileupload';
 
 
 @Component({
@@ -8,18 +9,42 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./vender.component.scss']
 })
 export class VenderComponent {
+  @ViewChild('fileUpload') fileUpload?: FileUpload;
 
   uploadedFiles: any[] = [];
 
   public productForm = new FormGroup({
-    nombres: new FormControl(null, [Validators.required]),
-    apellido_paterno: new FormControl(null, [Validators.required]),
-    apellido_materno: new FormControl(null, [Validators.required]),
-    email: new FormControl(null, [Validators.required, Validators.email]),
-    username: new FormControl(null, [Validators.required]),
-    password: new FormControl(null, [Validators.required]),
-    generos: new FormControl(null, [Validators.required])
+    nombre: new FormControl(null, [Validators.required]),
+    precio: new FormControl(null, [Validators.required]),
+    descripcion: new FormControl(null, [Validators.required]),
+    imagen: new FormControl(null, [Validators.required]),
+    categoria: new FormControl('prueba', [Validators.required]),
+    generos: new FormControl('prueba', [Validators.required])
   });
 
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    
+  }
+
+  uploadFile(event:any) {
+    for (let file of event.files) {
+      this.productForm.patchValue({ imagen: file });
+      this.productForm.get('imagen')?.updateValueAndValidity();
+    }
+  }
+
+  botonProducto(form:any) {
+    this.fileUpload?.upload();
+      console.log('Boton funciona',this.productForm.value);
+
+     
+      
+      
+  }
+
+
+  
 
 }

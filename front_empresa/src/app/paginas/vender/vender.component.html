@@ -1,44 +1,13 @@
-<!-- <form [formGroup]="productForm" >
-    <div class="form-group">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" formControlName="nombre" class="form-control" />
-    </div>
-  
-    <div class="form-group">
-      <label for="precio">Precio</label>
-      <input type="number" id="precio" formControlName="precio" class="form-control" />
-    </div>
-  
-    <div class="form-group">
-      <label for="descripcion">Descripción</label>
-      <textarea id="descripcion" formControlName="descripcion" class="form-control"></textarea>
-    </div>
-  
-    <div class="form-group">
-      <label for="imagen">Imagen</label>
-      <input type="file" id="imagen" formControlName="imagen" class="form-control" />
-    </div>
-  
-    <div class="form-group">
-      <label for="categoria">Categoría</label>
-      <input type="text" id="categoria" formControlName="categoria" class="form-control" />
-    </div>
-  
-    <div class="form-group">
-      <label for="generos">Géneros</label>
-      <p-multiSelect id="generos" [options]="generosOptions" formControlName="generos"></p-multiSelect>
-    </div>
-  
-    <button type="submit" class="btn btn-primary">Guardar</button>
-  </form> -->
+<shared-sidebar></shared-sidebar>
   <p-card>
+    <form action="" [formGroup]="productForm">
    <h2 style="text-align: center;">Sube tu producto</h2>
    <div class="flex flex-column gap-2">
     <div class="flex flex-column" >
       <div style="text-align: left;">
-       <label for="username">Nombre</label>
+       <label for="nombre">Nombre</label>
       </div>
-      <input formControlName="email" pInputText id="email" aria-describedby="username-help" />
+      <input style="width: 100%;" formControlName="nombre" pInputText aria-describedby="username-help" />
     </div>
     </div>
     <div class="flex flex-column gap-2">
@@ -46,7 +15,7 @@
           <div style="text-align: left;">
            <label for="username">Precio</label>
           </div>
-          <p-inputNumber  inputId="locale-user" [minFractionDigits]="2">  </p-inputNumber> 
+          <p-inputNumber formControlName="precio" [style]="{'width':'116rem'}" inputId="locale-user" [minFractionDigits]="2">  </p-inputNumber> 
         </div>
         </div>
         <div class="flex flex-column gap-2">
@@ -54,7 +23,7 @@
               <div style="text-align: left;">
                <label for="username">Descripcion</label>
               </div>
-              <textarea pInputTextarea></textarea>
+              <textarea formControlName="descripcion" style="width: 100%; resize: none;"  pInputTextarea></textarea>
             </div>
             </div>
             <div class="flex flex-column gap-2">
@@ -65,6 +34,22 @@
                   <p-dropdown  placeholder="Seleccione Categoria" optionLabel="name" [showClear]="true"></p-dropdown>
                 </div>
                 </div>
-                <p-fileUpload name="myfile[]" chooseLabel="Subir" cancelLabel="Cancelar"  [showUploadButton]="false"  accept="image/*" url="./upload.php"></p-fileUpload>
-                <p-multiSelect  optionLabel="name"></p-multiSelect>
+                <div  style="text-align: left;">
+                  <label for=""> Imagen del producto</label>
+                </div>
+                <p-fileUpload
+                  #fileUpload
+                  [customUpload]="true"
+                  accept="image/*"
+                 chooseLabel="Subir" cancelLabel="Cancelar"  [showUploadButton]="false"  
+                  (uploadHandler)="uploadFile($event)"
+                ></p-fileUpload>
+              <div  class="flex flex-column gap-2">
+                <div  style="text-align: left;">
+                <label for="">Genero</label>
+              </div>
+                <p-multiSelect formControlName="generos" placeholder="Seleccione generos" optionLabel="name"></p-multiSelect>
+              </div>
+              <button  pButton  pRipple (click)="botonProducto(productForm)" type="button" label="Ingresar" class="p-button-secondary"></button>
+  </form>
 </p-card> 
