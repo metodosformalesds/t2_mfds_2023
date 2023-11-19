@@ -31,7 +31,10 @@
                   <div style="text-align: left;">
                    <label for="username">Categoria</label>
                   </div>
-                  <p-dropdown  placeholder="Seleccione Categoria" optionLabel="name" [showClear]="true"></p-dropdown>
+                  <p-dropdown  placeholder="Seleccione Categoria"  
+                  [options]="categorias"[showClear]="true"  optionLabel="nombre"  formControlName="categoria">
+                  
+                </p-dropdown>
                 </div>
                 </div>
                 <div  style="text-align: left;">
@@ -48,8 +51,10 @@
                 <div  style="text-align: left;">
                 <label for="">Genero</label>
               </div>
-                <p-multiSelect formControlName="generos" placeholder="Seleccione generos" optionLabel="name"></p-multiSelect>
+                <p-multiSelect formControlName="generos" [options]="generos_back" optionLabel="nombre" placeholder="Seleccione generos" ></p-multiSelect>
               </div>
               <button  pButton  pRipple (click)="botonProducto(productForm)" type="button" label="Ingresar" class="p-button-secondary"></button>
   </form>
 </p-card> 
+
+

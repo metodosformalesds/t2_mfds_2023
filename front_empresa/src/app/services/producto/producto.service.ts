@@ -14,4 +14,19 @@ export class ProductoService {
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}producto/productos/`);
   }
+
+  postProducto(productoForm: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}producto/productos/`, 
+      productoForm     
+    );
+  }
+  
+
+  getCategoria(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}producto/categoria/`);
+  }
+  getGenero(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}producto/generos/`);
+  }
+
 }
