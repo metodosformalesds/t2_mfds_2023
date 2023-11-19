@@ -3,16 +3,22 @@
     <ul>
         
         <img routerLink="/inicio" alt="Card" src="assets/imagenes/logo.png" class="img">
-       
-        <!-- <li *ngFor="let item of items">
-            <a [routerLink]="item.routerLink" class="menu-item">
-            <i [ngClass]="item.icon"></i>
-            {{ item.label }}
+        <li *ngFor="let item of items" (click)="menu.toggle">
+            <a *ngIf="!item.items" [routerLink]="item.routerLink">
+              {{ item.label }}
             </a>
-        </li> 
-         -->
-        <button pButton  pRipple type="button"  (click)="menu.toggle($event)" class="p-button-invisible p-button-text p-button-plain p-button-lg" style="margin: 1rem;"> Libros </button>
-        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+            <a *ngIf="item.items" class="submenu">
+              {{ item.label }}
+              <ul>
+                <li *ngFor="let subItem of item.items">
+                  <a [routerLink]="subItem.routerLink">
+                    {{ subItem.label }}
+                  </a>
+                </li>
+              </ul>
+            </a>
+          </li>
+ 
         <p *ngIf="mensaje" style="margin-left: 350px;" class="additional-paragraph">{{ mensaje }}</p>
 
         <div style="margin-left: 100px;" class="card flex flex-wrap justify-content-center gap-3">
@@ -20,7 +26,7 @@
             <span class="p-input-icon-right">
                 <i class="pi pi-search"></i>
                 <input type="text" pInputText [(ngModel)]="value" />
-            </span> 
+            </span>
             <button pButton pRipple type="button" icon="pi pi-shopping-cart" class="p-button-rounded p-button-text p-button-plain p-button-lg"></button>
             <button pButton  pRipple type="button"  icon="pi pi-user" (click)="menu.toggle($event)" class="p-button-rounded p-button-text p-button-plain p-button-lg"></button>
             <p-menu #menu [popup]="true" [model]="itemsUser"></p-menu>
