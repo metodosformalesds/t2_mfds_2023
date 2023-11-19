@@ -48,7 +48,6 @@ export class SidebarComponent {
           } else {
             // Iniciar sesión
             this.navegar('/login');
-           
           }
         }
       }
