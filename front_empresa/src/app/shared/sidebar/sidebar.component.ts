@@ -62,8 +62,8 @@ export class SidebarComponent {
     }
 
     this.itemsUser = [
-      {label: 'Ver Perfil'},
-      {label:'Mi balance',command: () => this.navegar('/mi-balance')},
+      {label: 'Ver Perfil', routerLink: '/usuario' },
+      {label:'Mi balance',routerLink:'/mi-balance'},
       {label:'Configuracion'},
       {
         label: this.isAuthenticated ? 'Cerrar sesión' : 'Iniciar sesión',
