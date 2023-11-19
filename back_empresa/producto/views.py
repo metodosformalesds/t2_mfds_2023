@@ -11,10 +11,10 @@ class ProductoDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
 
-class ListarCategoria(generics.ListAPIView):
+class ListarCategoria(generics.ListCreateAPIView):
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
 
-class ListarGenero(generics.ListAPIView):
+class ListarGenero(generics.ListCreateAPIView):
     queryset = Genero.objects.all()
     serializer_class = GeneroSerializer

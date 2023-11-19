@@ -1,6 +1,6 @@
 <shared-sidebar></shared-sidebar>
   <p-card>
-    <form action="" [formGroup]="productForm">
+    <form enctype="multipart/form-data" action="" [formGroup]="productForm">
    <h2 style="text-align: center;">Sube tu producto</h2>
    <div class="flex flex-column gap-2">
     <div class="flex flex-column" >
@@ -32,7 +32,7 @@
                    <label for="username">Categoria</label>
                   </div>
                   <p-dropdown  placeholder="Seleccione Categoria"  
-                  [options]="categorias"[showClear]="true"  optionLabel="nombre"  formControlName="categoria">
+                  [options]="categorias"[showClear]="true"   optionLabel="nombre"  formControlName="categoria">
                   
                 </p-dropdown>
                 </div>
@@ -51,7 +51,10 @@
                 <div  style="text-align: left;">
                 <label for="">Genero</label>
               </div>
-                <p-multiSelect formControlName="generos" [options]="generos_back" optionLabel="nombre" placeholder="Seleccione generos" ></p-multiSelect>
+              <p-dropdown  placeholder="Seleccione Categoria"  
+              [options]="generos_back"[showClear]="true"   optionLabel="nombre"  formControlName="genero">
+              
+            </p-dropdown>
               </div>
               <button  pButton  pRipple (click)="botonProducto(productForm)" type="button" label="Ingresar" class="p-button-secondary"></button>
   </form>
