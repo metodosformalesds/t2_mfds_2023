@@ -15,8 +15,6 @@ import { FantasiaLibrosComponent } from './paginas/fantasia-libros/fantasia-libr
 import { HispanoamericanosLibrosComponent } from './paginas/hispanoamericanos-libros/hispanoamericanos-libros.component';
 import { RomanceLibrosComponent } from './paginas/romance-libros/romance-libros.component';
 import { ClasicosLibrosComponent } from './paginas/clasicos-libros/clasicos-libros.component';
-import { AventurasComicsComponent } from './paginas/aventuras-comics/aventuras-comics.component';
-import { ComediasComicComponent } from './paginas/comedias-comic/comedias-comic.component';
 import { RomanceComicComponent } from './paginas/romance-comic/romance-comic.component';
 import { BelicaComicComponent } from './paginas/belica-comic/belica-comic.component';
 import { KodomoComponent } from './paginas/kodomo/kodomo.component';
@@ -25,6 +23,9 @@ import { ShojoComponent } from './paginas/shojo/shojo.component';
 import { SeinenComponent } from './paginas/seinen/seinen.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
 import { VenderComponent } from './paginas/vender/vender.component';
+import { ComediaComicComponent } from './paginas/comedia-comic/comedia-comic.component';
+import { AventuraComicComponent } from './paginas/aventura-comic/aventura-comic.component';
+import { UsuarioComponent } from './paginas/usuario/usuario.component';
 
 const routes: Routes = [
 
@@ -43,19 +44,21 @@ const routes: Routes = [
  {path:'hispanoamericanos-libros',component:HispanoamericanosLibrosComponent},
  {path:'romance-libros',component:RomanceLibrosComponent},
  {path:'clasicos-libros',component:ClasicosLibrosComponent},
- {path:'aventura-comics',component:AventurasComicsComponent},
- {path:'comedia-comics',component:ComediasComicComponent},
- {path:'romance-comics',component:RomanceComicComponent},
- {path:'belica-comics',component:BelicaComicComponent},
+ {path:'romance-comic',component:RomanceComicComponent},
+ {path:'belica-comic',component:BelicaComicComponent},
+ {path:'comedia-comic',component:ComediaComicComponent},
+ {path:'aventura-comic',component:AventuraComicComponent},
  {path:'kodomo',component:KodomoComponent},
  {path:'shonen',component:ShonenComponent},
  {path:'shojo',component:ShojoComponent},
  {path:'seinen',component:SeinenComponent},
  {path:'registro',component:RegistroComponent},
  {path:'vender',component:VenderComponent},
+ 
+ {path:'usuario',component:UsuarioComponent},
 
  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
- 
+
 
 ];
 

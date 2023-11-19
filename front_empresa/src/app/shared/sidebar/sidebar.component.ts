@@ -36,8 +36,8 @@ export class SidebarComponent {
     {
       label: 'Comics',
       items: [
-        { label: 'Aventuras', routerLink: '/aventuras-comics' },
-        { label: 'Comedia', routerLink: '/comedias-comic' },
+        { label: 'Aventuras', routerLink: '/aventura-comic' },
+        { label: 'Comedia', routerLink: '/comedia-comic' },
         { label: 'Romance', routerLink: '/romance-comic' },
         { label: 'Bélica', routerLink: '/belica-comic' }
       ]

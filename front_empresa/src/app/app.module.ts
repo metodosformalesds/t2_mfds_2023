@@ -35,8 +35,6 @@ import { FantasiaLibrosComponent } from './paginas/fantasia-libros/fantasia-libr
 import { ClasicosLibrosComponent } from './paginas/clasicos-libros/clasicos-libros.component';
 import { RomanceLibrosComponent } from './paginas/romance-libros/romance-libros.component';
 import { HispanoamericanosLibrosComponent } from './paginas/hispanoamericanos-libros/hispanoamericanos-libros.component';
-import { AventurasComicsComponent } from './paginas/aventuras-comics/aventuras-comics.component';
-import { ComediasComicComponent } from './paginas/comedias-comic/comedias-comic.component';
 import { RomanceComicComponent } from './paginas/romance-comic/romance-comic.component';
 import { BelicaComicComponent } from './paginas/belica-comic/belica-comic.component';
 import { KodomoComponent } from './paginas/kodomo/kodomo.component';
@@ -49,6 +47,10 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {DropdownModule} from 'primeng/dropdown';
 import {FileUploadModule} from 'primeng/fileupload';
 import {MultiSelectModule} from 'primeng/multiselect';
+import { UsuarioComponent } from './paginas/usuario/usuario.component';
+import { AventuraComicComponent } from './paginas/aventura-comic/aventura-comic.component';
+import { ComediaComicComponent } from './paginas/comedia-comic/comedia-comic.component';
+
 
 
 
@@ -74,15 +76,16 @@ import {MultiSelectModule} from 'primeng/multiselect';
     ClasicosLibrosComponent,
     RomanceLibrosComponent,
     HispanoamericanosLibrosComponent,
-    AventurasComicsComponent,
-    ComediasComicComponent,
     RomanceComicComponent,
     BelicaComicComponent,
     KodomoComponent,
     ShonenComponent,
     ShojoComponent,
     SeinenComponent,
-    VenderComponent
+    VenderComponent,
+    UsuarioComponent,
+    AventuraComicComponent,
+    ComediaComicComponent
   ],
   imports: [
     BrowserModule,
@@ -100,10 +103,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
     DropdownModule,
     FileUploadModule,
     MultiSelectModule,
-    
-    
-    
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
