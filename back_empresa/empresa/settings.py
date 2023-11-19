@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'carrito',
+    'balance',
     'usuarios',
     'producto',
     'rest_framework.authtoken',  # Si deseas autenticación con tokens
