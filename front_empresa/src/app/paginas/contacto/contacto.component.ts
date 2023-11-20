@@ -17,7 +17,7 @@ export class ContactoComponent implements OnInit {
 
   send(): void {
     const { name, email, message,phone,cu } = this.form.value;
-    alert(`Name: ${name}, Email: ${email}, Phone: ${phone},Message: ${message},Cu: ${cu} `);
+    // alert(`Name: ${name}, Email: ${email}, Phone: ${phone},Message: ${message},Cu: ${cu} `);
   }
 
   private buildForm(): void {
