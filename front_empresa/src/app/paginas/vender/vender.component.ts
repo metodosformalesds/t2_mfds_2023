@@ -1,15 +1,25 @@
 import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FileUpload } from 'primeng/fileupload';
+import { FileUpload, FileUploadEvent } from 'primeng/fileupload';
 import { ProductoService } from 'src/app/services/producto/producto.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MessageService } from 'primeng/api';
 
+
+// interface ProductData {
+//   nombre: string | null;
+//   precio: number | null;
+//   descripcion: string | null;
+//   imagen: File | null;
+//   categoria: number | null; // Ajusta el tipo según tus necesidades
+//   genero: number | null; // Ajusta el tipo según tus necesidades
+// }
 
 @Component({
   selector: 'app-vender',
   templateUrl: './vender.component.html',
   styleUrls: ['./vender.component.scss'],
-  providers:[HttpClientModule]
+  providers:[HttpClientModule,MessageService]
 })
 export class VenderComponent {
   @ViewChild('fileUpload') fileUpload?: FileUpload;
@@ -26,9 +36,29 @@ export class VenderComponent {
     genero: new FormControl(null, [Validators.required])
   });
 
-  constructor(private productoService: ProductoService) {
+  constructor(private productoService: ProductoService, private messageService: MessageService) {
  
   }
+
+ 
+
+  onImageSelect(event: any) {
+    const file = event.files[0];
+    this.productForm.patchValue({ imagen: file });
+    console.log('evento de onImageSelect',event);
+    
+
+    // Puedes agregar aquí lógica adicional, como mostrar una vista previa de la imagen si lo deseas
+  }
+
+  // onUpload(event: FileUploadEvent) {
+  //   console.log('Upload Event:', event);
+  //   for (const file of event.files) {
+  //     this.messageService.add({ severity: 'info', summary: 'File Uploaded', detail: file.name });
+  //   }
+    
+    
+  // }
 
   ngOnInit(): void {
     
@@ -37,7 +67,10 @@ export class VenderComponent {
   }
 
   uploadFile(event:any) {
-    this.productForm.get('imagen')?.setValue(event.files[0]);
+    const file = event.files[0];
+    console.log('Contenido de la variable file:', file);
+    this.productForm.patchValue({ imagen: file });
+    
     
   }
 
@@ -51,19 +84,27 @@ export class VenderComponent {
 
         
         
-        const categoryId = this.getSelectedCategoryId();
-        const generoId = this.getSelectedGenreId();
-        const productData = {
-          ...this.productForm.value,
-          
-          categoria: categoryId,
-          genero:generoId
-          
-        };
-        console.log(productData);
+        const formData = new FormData();
+
+  // Agrega los campos al FormData
+  formData.append('nombre', this.productForm.value.nombre || '');
+  formData.append('precio', this.productForm.value.precio || '');
+  formData.append('descripcion', this.productForm.value.descripcion || '');
+
+  // Convierte los valores de categoria y genero a número antes de agregarlos al FormData
+  formData.append('categoria', (this.getSelectedCategoryId() || 0).toString());
+  formData.append('genero', (this.getSelectedGenreId() || 0).toString());
+
+  // Agrega la imagen al FormData
+  const imagen:any = this.productForm.value.imagen;
+  if (imagen instanceof File) {
+    formData.append('imagen', imagen);
+  }
+        
+        console.log(formData);
         
         // Llama al servicio para realizar la solicitud POST
-        this.productoService.postProducto(productData).subscribe(
+        this.productoService.postProducto(formData).subscribe(
           (response) => {
             // Maneja la respuesta aquí, por ejemplo, muestra un mensaje de éxito
             console.log('Solicitud POST exitosa:', response);

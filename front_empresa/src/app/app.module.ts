@@ -49,6 +49,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {DropdownModule} from 'primeng/dropdown';
 import {FileUploadModule} from 'primeng/fileupload';
 import {MultiSelectModule} from 'primeng/multiselect';
+import { ToastModule } from 'primeng/toast';
 
 
 
@@ -100,6 +101,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
     DropdownModule,
     FileUploadModule,
     MultiSelectModule,
+    ToastModule
     
     
     
