@@ -43,6 +43,7 @@ import { KodomoComponent } from './paginas/kodomo/kodomo.component';
 import { ShonenComponent } from './paginas/shonen/shonen.component';
 import { ShojoComponent } from './paginas/shojo/shojo.component';
 import { SeinenComponent } from './paginas/seinen/seinen.component';
+import { CartComponent } from './paginas/cart/cart.component';
 
 
 
@@ -74,7 +75,8 @@ import { SeinenComponent } from './paginas/seinen/seinen.component';
     KodomoComponent,
     ShonenComponent,
     ShojoComponent,
-    SeinenComponent
+    SeinenComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +88,8 @@ import { SeinenComponent } from './paginas/seinen/seinen.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MenuModule
+    MenuModule,
+
     
     
     

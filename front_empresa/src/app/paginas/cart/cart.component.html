@@ -1,0 +1,26 @@
+<shared-sidebar></shared-sidebar>
+<div><h1 class="Cart_headerEmptyCart__UAQ6Z">Mi carrito de compras</h1>
+</div>
+<div class="container mt-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre del libro</th>
+          <th>Vendedor</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let elemento of datos">
+          <td>{{ elemento.id }}</td>
+          <td>{{ elemento.nombre }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="borrarElemento(elemento.id)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+<shared-footer></shared-footer>

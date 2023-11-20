@@ -24,7 +24,7 @@ import { ShonenComponent } from './paginas/shonen/shonen.component';
 import { ShojoComponent } from './paginas/shojo/shojo.component';
 import { SeinenComponent } from './paginas/seinen/seinen.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
-
+import { CartComponent } from './paginas/cart/cart.component';
 const routes: Routes = [
 
  {path:'login',component:LoginComponent},
@@ -51,6 +51,7 @@ const routes: Routes = [
  {path:'shojo',component:ShojoComponent},
  {path:'seinen',component:SeinenComponent},
  {path:'registro',component:RegistroComponent},
+ {path:'cart',component:CartComponent},
 
  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
  
