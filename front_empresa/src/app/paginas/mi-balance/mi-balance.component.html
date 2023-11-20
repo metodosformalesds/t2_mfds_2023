@@ -1,8 +1,9 @@
 <shared-sidebar></shared-sidebar>
+
 <div>
     <h2>Mi balance</h2>
 </div>
-<div class="bg-grey p-3 mb-3">
+<!-- <div class="bg-grey p-3 mb-3">
     <div class="row">
     <div class="col-12"><h3><i class="icon-piggy fs-24"></i> Balance de tus compras y ventas</h3><hr></div>
     <div class="col-12 text-left">
@@ -17,58 +18,25 @@
         </a>
         </p>
         <p class="font-weight-bold h2">$0</p>
-        </div>
+         </div>
+
         <div class="col-12 col-md-3">
             <button type="button" class="btn btn-primary btn-block py-md-2 mt-md-0 mt-2" data-toggle="collapse" >Cobrar</button>
             </div>
-
-<!-- <div id="content-wrapper" class="container pt-3 pt-md-5">
-    <h2 class="text-center">Mi Balance</h2>
-    <div class="bg-grey p-3 mb-3">
-    <div class="row">
-    <div class="col-12"><h3><i class="icon-piggy fs-24"></i> Balance de tus compras y ventas</h3><hr></div>
-    <div class="col-12 text-left">
-    <div class="row align-items-center">
-    <div class="col-6 col-md-3">
-    <p class="fs-14 mb-1">Puedo cobrar</p>
-    <p class="font-weight-bold h2 ">$0</p>
-    </div>
-    <div class="col-6 col-md-3">
-    <p class="fs-14 mb-1">Pendiente <a href="#" class="d-none" data-toggle="modal" data-target="#modal-wallet-info-pending">
-    <span class="icon-info ml-1 text-neutral01 fs-16"></span>
-    </a>
-    </p>
-    <p class="font-weight-bold h2">$0</p>
-    </div>
-    <div class="col-md-3 col-0">
-    </div>
-    <div class="col-12 col-md-3">
-    <button type="button" class="btn btn-primary btn-block py-md-2 mt-md-0 mt-2" data-toggle="collapse" href="#wallet-collect" disabled="" }="">Cobrar</button>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="modal fade" id="modal-wallet-info-pending" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-    <div class="modal-header">
-    <div class="container">
-    <div class="d-flex justify-content-between">
-    <span class="icon-close fs-16 invisible"></span>
-    <h2 class="modal-title fs-16 mt-4 ml-2">Saldo pendiente</h2>
-    <span class="icon-close fs-16" data-dismiss="modal"></span>
-    </div>
-    </div>
-    </div>
-    <div class="modal-body">
-    <div class="m-2 px-4 pb-3">
-    <span class="text-neutral02 fs-16">¡Tu dinero está en camino! 💸 Podrás cobrarlo 48h después de que tu compradora haya recibido el producto.</span>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-  
-    </div>  -->
+            <p-table [columns]="cols" [value]="products" [tableStyle]="{'min-width': '50rem'}">
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                         <th *ngFor="let col of columns">
+                            {{col.header}}
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr>
+                        <td *ngFor="let col of columns">
+                            {{rowData[col.field]}}
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table> -->
     <shared-footer></shared-footer>
