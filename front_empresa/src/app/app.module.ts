@@ -51,7 +51,6 @@ import { UsuarioComponent } from './paginas/usuario/usuario.component';
 import { AventuraComicComponent } from './paginas/aventura-comic/aventura-comic.component';
 import { ComediaComicComponent } from './paginas/comedia-comic/comedia-comic.component';
 
-import { ToastModule } from 'primeng/toast';
 
 
 
@@ -105,11 +104,6 @@ import { ToastModule } from 'primeng/toast';
     FileUploadModule,
     MultiSelectModule,
 
-    ToastModule
-    
-    
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
