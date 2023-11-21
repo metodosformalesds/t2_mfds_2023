@@ -108,6 +108,7 @@ export class VenderComponent {
           (response) => {
             // Maneja la respuesta aquí, por ejemplo, muestra un mensaje de éxito
             console.log('Solicitud POST exitosa:', response);
+             window.location.reload();
           },
           (error) => {
             // Maneja cualquier error que ocurra durante la solicitud
