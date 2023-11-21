@@ -8,11 +8,13 @@ margin-left: 20%;
 .card {
     width:25rem;
     text-align: center;
-    
-    
-    
 }
-
+img{
+  width:45rem;
+  height: 50rem;
+  background-position: center;
+  background-size: contain;
+}
 .container {
     display: flex;
     background-color: #F5F2F2;
