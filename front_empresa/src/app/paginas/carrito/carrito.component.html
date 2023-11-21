@@ -1,0 +1,42 @@
+<shared-sidebar></shared-sidebar>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <table>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+        {% for item in Carrito.carritoitem_set.all %}
+        <tr>
+            <td>{{ item.Producto.nombre }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.product.price }}</td>
+            <td>    
+                <a href="{% url 'remove_from_carrito' producto %}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>Total: {{ total }}</p>
+    <form action="{% url 'process_payment' %}" method="post">
+        {% csrf_token %}
+        <h2>Opciones de Pago</h2>
+        <select name="payment_method">
+            <option value="paypal">PayPal</option>
+            <option value="stripe">Stripe</option>
+        </select>
+        <input type="submit" value="Realizar Pago">
+    </form>
+</body>
+</html>
+
+
+
+<shared-footer></shared-footer>

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'producto',
     'rest_framework.authtoken',  # Si deseas autenticación con tokens
     'rest_framework_simplejwt',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
