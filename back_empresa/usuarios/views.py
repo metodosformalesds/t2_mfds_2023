@@ -6,6 +6,7 @@ from django.contrib.auth import get_user_model
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from balance.models import Balance
 
 
 from django.contrib.auth import get_user_model
@@ -55,5 +56,9 @@ class CrearUsuario(APIView):
         # Crea el usuario personalizado con los campos específicos
         usuario_personalizado = Usuario(nombres=nombres, apellido_paterno=apellido_paterno, apellido_materno=apellido_materno, edad=edad, usuario=user,email=email)
         usuario_personalizado.save()
+
+        balance = Balance(titular=usuario_personalizado.usuario, saldo=0)
+        balance.save()
+
 
         return Response({'message': 'Usuario creado correctamente'}, status=status.HTTP_201_CREATED)
