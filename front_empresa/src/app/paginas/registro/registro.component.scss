@@ -1,0 +1,43 @@
+img {
+  width: 73vh;
+  height: 60vh;
+  margin-left: 20%;
+  
+   }
+  
+input {
+  width: 40rem;
+ 
+}
+  
+  .container {
+      display: flex;
+      background-color: #F5F2F2;
+    }
+  
+    .left-element {
+      /* Estilos para el elemento izquierdo */
+    }
+  
+    .right-element {
+  
+     margin-left: 300px;
+     margin-top: -20px;
+  
+    }
+    
+    .p-button-secondary {
+      background-color: black;
+      color: white; /* Cambia el color del texto a blanco para que sea visible en el fondo negro */
+    }
+  
+    .hover-effect:hover {
+      color: purple; /* Cambia 'YourColor' al color que desees */
+      /* Otros estilos que desees aplicar al hacer hover */
+  }
+
+ 
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }

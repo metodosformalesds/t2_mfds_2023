@@ -1,14 +1,13 @@
 .contenedor {
     display: flex; /* Utilizamos un contenedor flex para alinear los textos izquierdo y derecho. */
   }
-  
+
   .texto-izquierdo {
     flex: 1; /* El texto izquierdo ocupará el espacio disponible. */
   }
-  
+
   .texto-derecho {
     flex: 3;
-    
   }
 
   .correo {
@@ -24,8 +23,7 @@
   :host ::ng-deep .p-card {
     background-color: black !important;
     color: white;
-    
-    
+
   }
 
   .red_izq {
@@ -37,14 +35,18 @@
 
   .red_der {
     flex: 12;
-    ; margin-right: 150px;
+    margin-right: 150px;
   }
 
   .footer {
-    position: fixed;
+    position:relative;
     bottom: 0;
     left: 0;
     width: 100%;
   }
-  
 
+
+  .hover-effect:hover {
+    color: purple; /* Cambia 'YourColor' al color que desees */
+    /* Otros estilos que desees aplicar al hacer hover */
+}

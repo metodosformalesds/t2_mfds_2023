@@ -2,17 +2,19 @@
 <p-card  [style]="{'background-color':'black', 'color':'white','width':'100%'}">
     <div class="contenedor">
         <div class="texto-izquierdo">
-            <p>¿Como vendo?</p>
-            <p>¿Como comprar?</p>
-            <p>Politica de devoluciones</p>
-            <p>Preguntas frecuentes</p>
+            <p routerLink="/como-vendo" class="hover-effect" style="cursor: pointer;">¿Cómo vendo?</p>
+            <p routerLink="/como-comprar" class="hover-effect" style="cursor: pointer;">¿Cómo comprar?</p>
+            <p routerLink="/politica-de-devoluciones" class="hover-effect" style="cursor: pointer;">Política de devoluciones</p>
+            <p routerLink="/preguntas-frecuentes" class="hover-effect" style="cursor: pointer;">Preguntas frecuentes</p>
         </div>
+        
         <div class="texto-derecho">
-            <p>¿Quienes somos?</p>
-            <p>Mision & Vision</p>
-            <p>Contacto</p>
-            <p>Terminos y condiciones</p>
+            <p routerLink="/quienes-somos" class="hover-effect" style="cursor: pointer;">¿Quiénes somos?</p>
+            <p routerLink="/misvis" class="hover-effect" style="cursor: pointer;">Misión & Visión</p>
+            <p routerLink="/contacto" class="hover-effect" style="cursor: pointer;">Contacto</p>
+            <p routerLink="/terminos-y-condiciones" class="hover-effect" style="cursor: pointer;">Términos y condiciones</p>
         </div>
+        
         <div class="correo">
             <p>Para recibir novedades sumate a nuestra comunidad</p>
             <input  style="width: 500px; border-radius: 10px;margin-right: 50px;" placeholder="Correo Electronico:" pInputText aria-describedby="username-help" />
@@ -21,20 +23,21 @@
             </p-button>
         </div>
     </div>
-    
 
 </p-card >
 
 <p-card [style]="{
+    
     'margin-top':'2px',
     'padding':'0',
     'height':'50px',
     'border-top-left-radius':'0',
     'border-top-right-radius':'0',
     'border-bottom-left-radius':'10px',
-    'border-bottom-right-radius':'10px'
+    'border-bottom-right-radius':'10px',
+    'overflow': 'hidden'
   }">
-    
+
   <div style="display: flex; align-items: center; justify-content: center;margin-top: -40px;">
     <div class="red_izq">
         <p>Síguenos</p>
@@ -46,6 +49,6 @@
         <p style="text-align: center; margin-left: 10px;">Todos los derechos reservados</p>
     </div>
 </div>
-   
+
 </p-card>
 </div>
