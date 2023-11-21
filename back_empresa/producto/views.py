@@ -2,6 +2,8 @@ from django.shortcuts import render
 from rest_framework import generics
 from .models import Producto, Categoria, Genero
 from .serializers import ProductoSerializer, CategoriaSerializer, GeneroSerializer
+from django.http import JsonResponse
+from django.views import View
 
 class ProductoListCreateView(generics.ListCreateAPIView):
     queryset = Producto.objects.all()
@@ -31,3 +33,15 @@ class ListarCategoria(generics.ListCreateAPIView):
 class ListarGenero(generics.ListCreateAPIView):
     queryset = Genero.objects.all()
     serializer_class = GeneroSerializer
+
+class TresPrimerosProductosView(View):
+    
+    def get(self, request, *args, **kwargs):
+        # Obtener los tres primeros productos
+        tres_primeros_productos = Producto.objects.all()[:3]
+        
+        # Serializar los productos
+        serializer = ProductoSerializer(tres_primeros_productos, many=True)
+        
+        # Devolver la respuesta JSON
+        return JsonResponse(serializer.data, safe=False)
