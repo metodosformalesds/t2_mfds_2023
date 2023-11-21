@@ -14,7 +14,7 @@ export class InicioComponent {
   constructor (private producto:ProductoService) {}
 
   ngOnInit() {
-    this.producto.getProducts().subscribe(data => {
+    this.producto.joyotas().subscribe(data => {
       this.products = data;
     });
   }
