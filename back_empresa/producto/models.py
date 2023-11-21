@@ -9,6 +9,7 @@ class Categoria(models.Model):
 
 class Genero(models.Model):
     nombre = models.CharField(max_length=50, unique=True)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre
@@ -18,8 +19,8 @@ class Producto(models.Model):
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     descripcion = models.TextField()
     imagen = models.ImageField(upload_to='productos/', null=True, blank=True)
-    categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)
-    generos = models.ManyToManyField(Genero)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre
