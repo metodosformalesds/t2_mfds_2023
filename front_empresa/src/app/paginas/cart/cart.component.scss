@@ -1,0 +1,23 @@
+.carrito {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.carrito ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.carrito li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.carrito button {
+    margin-left: 10px;
+}

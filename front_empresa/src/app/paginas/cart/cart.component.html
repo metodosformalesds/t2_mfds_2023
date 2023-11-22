@@ -1,0 +1,15 @@
+<shared-sidebar></shared-sidebar>
+
+<div class="carrito">
+  <h2>Carrito de compras</h2>
+  <ul>
+     <li *ngFor="let producto of productos">
+       {{ producto.nombre }} - Cantidad: {{ producto.cantidad }} - Precio: {{ producto.precio }}
+       <button (click)="eliminarDelCarrito(producto)">Eliminar</button>
+     </li>
+  </ul>
+  <h3>Total: {{ total }}</h3>
+  <button routerLink="/pago">Continuar al pago</button>
+ </div>
+
+<shared-footer></shared-footer>
