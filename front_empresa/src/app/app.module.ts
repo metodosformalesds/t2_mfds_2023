@@ -50,7 +50,6 @@ import {MultiSelectModule} from 'primeng/multiselect';
 import { UsuarioComponent } from './paginas/usuario/usuario.component';
 import { AventuraComicComponent } from './paginas/aventura-comic/aventura-comic.component';
 import { ComediaComicComponent } from './paginas/comedia-comic/comedia-comic.component';
-import { CarritoComponent } from './paginas/carrito/carrito.component';
 
 
 
@@ -86,8 +85,7 @@ import { CarritoComponent } from './paginas/carrito/carrito.component';
     VenderComponent,
     UsuarioComponent,
     AventuraComicComponent,
-    ComediaComicComponent,
-    CarritoComponent
+    ComediaComicComponent
   ],
   imports: [
     BrowserModule,
