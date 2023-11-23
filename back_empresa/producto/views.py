@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics, status
 from .models import Producto, Categoria, Genero
 from .serializers import ProductoSerializer, CategoriaSerializer, GeneroSerializer
 from django.http import JsonResponse
 from django.views import View
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 
 class ProductoListCreateView(generics.ListCreateAPIView):
     queryset = Producto.objects.all()
@@ -45,3 +48,9 @@ class TresPrimerosProductosView(View):
         
         # Devolver la respuesta JSON
         return JsonResponse(serializer.data, safe=False)
+
+class ProductosPorGeneroView(APIView):
+    def get(self, request, genero_id, *args, **kwargs):
+        productos = Producto.objects.filter(genero__id=genero_id)
+        serializer = ProductoSerializer(productos, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)

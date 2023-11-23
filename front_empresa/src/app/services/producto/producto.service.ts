@@ -55,4 +55,18 @@ export class ProductoService {
       })
     );
   }
+
+  getProductosPorGenero(generoId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}producto/productos/por-genero/${generoId}/`).pipe(
+      map(products => {
+        // Mapea las rutas de las imágenes para que incluyan la URL base
+        return products.map(product => {
+          return {
+            ...product,
+            imagen: `${this.apiUrl}${product.imagen}`,
+          };
+        });
+      })
+    );
+  }
 }
