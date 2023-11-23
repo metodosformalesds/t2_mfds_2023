@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductoService } from 'src/app/services/producto/producto.service';
 
 @Component({
-  selector: 'app-seinen',
-  templateUrl: './seinen.component.html',
-  styleUrls: ['./seinen.component.scss']
+  selector: 'app-detalle-producto',
+  templateUrl: './detalle-producto.component.html',
+  styleUrls: ['./detalle-producto.component.scss']
 })
-export class SeinenComponent {
+export class DetalleProductoComponent {
   producto: any;
 
   constructor(private route: ActivatedRoute, private productoService: ProductoService) { }

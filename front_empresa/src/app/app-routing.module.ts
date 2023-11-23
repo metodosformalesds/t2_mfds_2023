@@ -26,6 +26,7 @@ import { VenderComponent } from './paginas/vender/vender.component';
 import { ComediaComicComponent } from './paginas/comedia-comic/comedia-comic.component';
 import { AventuraComicComponent } from './paginas/aventura-comic/aventura-comic.component';
 import { UsuarioComponent } from './paginas/usuario/usuario.component';
+import { DetalleProductoComponent } from './paginas/detalle-producto/detalle-producto.component';
 
 const routes: Routes = [
 
@@ -56,6 +57,7 @@ const routes: Routes = [
  {path:'vender',component:VenderComponent},
  
  {path:'usuario',component:UsuarioComponent},
+ { path: 'detalle-producto/:id', component:DetalleProductoComponent },
 
  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
 

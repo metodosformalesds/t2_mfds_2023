@@ -32,8 +32,9 @@
       <div *ngFor="let product of products" class="product-item">
         <h2>{{ product.nombre }}</h2>
         <p>Precio: {{ product.precio }}</p>
-        <img [src]="product.imagen" alt="{{ product.nombre }}">
+        <img style="cursor: pointer;" (click)="verDetalle(product.id)" [src]="product.imagen" alt="{{ product.nombre }}">
         <!-- Agrega más campos según tus necesidades -->
+        
       </div>
     </div>
   </div>

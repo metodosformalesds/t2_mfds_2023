@@ -52,6 +52,7 @@ import { AventuraComicComponent } from './paginas/aventura-comic/aventura-comic.
 import { ComediaComicComponent } from './paginas/comedia-comic/comedia-comic.component';
 
 import { ToastModule } from 'primeng/toast';
+import { DetalleProductoComponent } from './paginas/detalle-producto/detalle-producto.component';
 
 
 
@@ -86,7 +87,8 @@ import { ToastModule } from 'primeng/toast';
     VenderComponent,
     UsuarioComponent,
     AventuraComicComponent,
-    ComediaComicComponent
+    ComediaComicComponent,
+    DetalleProductoComponent
   ],
   imports: [
     BrowserModule,

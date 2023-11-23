@@ -43,4 +43,16 @@ export class ProductoService {
     return this.http.get<any[]>(`${this.apiUrl}producto/generos/`);
   }
 
+
+  getProducto(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}producto/productos/${id}/`).pipe(
+      map(product => {
+        // Mapea la ruta de la imagen para que incluya la URL base
+        return {
+          ...product,
+        
+        };
+      })
+    );
+  }
 }

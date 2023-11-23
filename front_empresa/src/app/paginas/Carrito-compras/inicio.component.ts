@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CarritoService } from './carrito.service';
+// import { CarritoService } from './carrito.service';
 
 @Component({
   selector: 'app-carrito',
@@ -7,13 +7,13 @@ import { CarritoService } from './carrito.service';
   styleUrls: ['./carrito.component.scss']
 })
 export class CarritoComponent {
-  constructor(public carritoService: CarritoService) {}
+  // constructor(public carritoService: CarritoService) {}
 
-  eliminarDelCarrito(index: number) {
-    this.carritoService.eliminarDelCarrito(index);
-  }
+  // eliminarDelCarrito(index: number) {
+  //   this.carritoService.eliminarDelCarrito(index);
+  // }
 
-  calcularTotal() {
-    return this.carritoService.calcularTotal();
-  }
+  // calcularTotal() {
+  //   return this.carritoService.calcularTotal();
+  // }
 }
