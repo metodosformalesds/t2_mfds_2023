@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class BalanceService {
 
- private apiUrl = 'http://tu-api-django/acciones/';
+   private apiUrl = 'http://127.0.0.1:8000/';
 
  constructor(private http: HttpClient) { }
 
- getAcciones(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+ getHistorial(balanceId: number): Observable<any[]> {
+   return this.http.get<any[]>(`${this.apiUrl}balance/balances/${balanceId}/historial/`);
  }
 
 }

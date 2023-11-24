@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'; // Importa ActivatedRoute para obtener el ID del balance desde la URL
+import { BalanceService } from './balance.service';
+import { LoginService } from 'src/app/services/login.service';
 
 export class Accion {
  constructor(
@@ -16,12 +19,22 @@ export class Accion {
 export class MiBalanceComponent implements OnInit {
  acciones: Accion[] = [];
  saldo: number = 0; // Aquí se  inicializa el saldo con los valores de tus compras y ventas
+ balanceId: any;
+ historial: any[]= [];
 
- constructor() { }
+ constructor( private balanceService: BalanceService,    private loginService: LoginService,
+   private route: ActivatedRoute) { }
 
 
  ngOnInit(): void {
-    // ...
+  
+
+    // Llama a la función getHistorial() del servicio para obtener el historial
+    this.balanceService.getHistorial(2).subscribe(data => {
+      this.historial = data;
+      console.log(this.historial);
+      
+    });
  }
  cobrar(): void {
   // Aquí  implementar la lógica para cobrar

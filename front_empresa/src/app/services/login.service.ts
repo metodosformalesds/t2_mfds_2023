@@ -55,4 +55,25 @@ export class LoginService {
     localStorage.removeItem('refresh_token');
     // this.router.navigate(['/login']);
   }
+
+  getUserId(): number | null {
+    const accessToken = localStorage.getItem('access_token');
+
+    if (accessToken) {
+      try {
+        const decodedToken: any = jwtDecode(accessToken);
+        console.log();
+        
+        // Dependiendo de la estructura de tu token, ajusta esta línea para obtener el ID del usuario
+        const userId = decodedToken.user_id;
+
+        return userId ? +userId : null; // Convierte a número o devuelve null si no hay un ID válido
+      } catch (error) {
+        console.error('Error al decodificar el token:', error);
+      }
+    }
+
+    return null;
+  }
+
 }

@@ -2,7 +2,7 @@
 
     <ul>
 
-        <img routerLink="/inicio" alt="Card" src="assets/imagenes/logo.png" class="img">
+        <img style="cursor: pointer;" routerLink="/inicio" alt="Card" src="assets/imagenes/logo.png" class="img">
         <li *ngFor="let item of items" class="list">
             <a *ngIf="!item.items" [routerLink]="item.routerLink">
               {{ item.label }}

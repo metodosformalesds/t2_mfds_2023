@@ -16,18 +16,18 @@
     <table class="table">
        <thead>
          <tr>
-           <th>Nombre</th>
-           <th>Precio</th>
-           <th>Cantidad</th>
-           <th>Subtotal</th>
+           <th>Accion</th>
+           <th>Descripcion</th>
+           <th>Fecha</th>
+           <th>Monto</th>
          </tr>
        </thead>
        <tbody>
-         <tr *ngFor="let accion of acciones">
-           <td>{{ accion.nombre }}</td>
-           <td>{{ accion.precio }}</td>
-           <td>{{ accion.cantidad }}</td>
-           <td>{{ accion.cantidad * accion.precio }}</td>
+         <tr *ngFor="let historial of historial">
+           <td>{{ historial.accion }}</td>
+           <td>{{ historial.descripcion }}</td>
+           <td>{{ historial.fecha }}</td>
+           <td>{{ historial.monto }}</td>
          </tr>
        </tbody>
     </table>
