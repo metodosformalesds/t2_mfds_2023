@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductoService } from 'src/app/services/producto/producto.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-romance-libros',
   templateUrl: './romance-libros.component.html',
@@ -10,7 +10,7 @@ import { ProductoService } from 'src/app/services/producto/producto.service';
 export class RomanceLibrosComponent {
   productos: any[]= [];
 
-  constructor(private route: ActivatedRoute, private productoService: ProductoService) { }
+  constructor(private route: ActivatedRoute, private productoService: ProductoService, private router:Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -26,4 +26,10 @@ export class RomanceLibrosComponent {
       );
     });
   }
+
+  verDetalle(id: number): void {
+    // Navegar a la página de detalles del producto con el id del producto
+    this.router.navigate(['/detalle-producto', id]);
+  }
+
 }
