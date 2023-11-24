@@ -171,8 +171,8 @@ main{
       left: 40px;
       width: calc(100% - 40px);
       height: 3px;
-      background: #115dd8;
-      background: linear-gradient(to right, #115dd8 0%,#115dd8 20%,#ddd 20%,#ddd 100%);
+      background: #000000;
+      background: linear-gradient(to right, #000000 0%,#000000 20%,#ddd 20%,#ddd 100%);
     }
     
     .recommend{
@@ -193,7 +193,7 @@ main{
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         text-transform: uppercase;
-        color: #115dd8;
+        color: #000000;
       }
     }
     
