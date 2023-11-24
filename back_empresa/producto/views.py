@@ -25,9 +25,21 @@ class ProductoListCreateView(generics.ListCreateAPIView):
 
         serializer.save()
 
+
 class ProductoDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
+
+    def get(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+
+        # Agregar el nombre de la categoría y del género al resultado
+        data = serializer.data
+        data['categoria_nombre'] = instance.categoria.nombre if instance.categoria else None
+        data['genero_nombre'] = instance.genero.nombre if instance.genero else None
+
+        return Response(data)
 
 class ListarCategoria(generics.ListCreateAPIView):
     queryset = Categoria.objects.all()
