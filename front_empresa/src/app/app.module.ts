@@ -51,7 +51,7 @@ import { UsuarioComponent } from './paginas/usuario/usuario.component';
 import { AventuraComicComponent } from './paginas/aventura-comic/aventura-comic.component';
 import { ComediaComicComponent } from './paginas/comedia-comic/comedia-comic.component';
 import { CartComponent } from './paginas/cart/cart.component';
-import { Cart2Component } from './cart2/cart2.component';
+import { PagoComponent } from './paginas/pago/pago.component';
 
 
 
@@ -89,7 +89,7 @@ import { Cart2Component } from './cart2/cart2.component';
     AventuraComicComponent,
     ComediaComicComponent,
     CartComponent,
-    Cart2Component
+    PagoComponent
   ],
   imports: [
     BrowserModule,

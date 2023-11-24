@@ -1,0 +1,42 @@
+.carrito {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 50rem;
+   
+    ul {
+       list-style-type: none;
+       padding: 0;
+   
+       li {
+         padding: 10px 0;
+         display: flex;
+         justify-content: space-between;
+         align-items: right;
+       }
+    }
+   
+    h2, h3 {
+       text-align: right;
+    }
+   .carrito {
+       text-align: right;
+   }
+    button {
+       background-color: #000000;
+       color: white;
+       padding: 10px 20px;
+       border: none;
+       cursor: pointer;
+       font-size: 16px;
+       margin-top: 10px;
+       align-items: right;
+   
+       &:hover {
+         background-color: #C39E78;
+       }
+    }
+   }

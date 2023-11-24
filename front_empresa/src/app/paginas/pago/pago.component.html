@@ -1,0 +1,16 @@
+<shared-sidebar></shared-sidebar>
+
+<div class="carrito">
+  <h2>Tipo de pago</h2>
+  <ul>
+     <li *ngFor="let producto of productos">
+       {{ producto.nombre }} - Cantidad: {{ producto.cantidad }} - Precio: {{ producto.precio }}
+     </li>
+  </ul>
+  <h3>Total: {{ total }}</h3>
+  <div class="carrito"><button routerLink="/pago">Tarjeta bancaria</button></div>
+  <div class="carrito"><button routerLink="/pago">Monedero</button></div>
+  <div class="carrito"><button routerLink="/pago">Efectivo</button></div>
+ </div>
+
+<shared-footer></shared-footer>

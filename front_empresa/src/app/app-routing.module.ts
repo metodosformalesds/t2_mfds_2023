@@ -27,6 +27,7 @@ import { ComediaComicComponent } from './paginas/comedia-comic/comedia-comic.com
 import { AventuraComicComponent } from './paginas/aventura-comic/aventura-comic.component';
 import { UsuarioComponent } from './paginas/usuario/usuario.component';
 import { CartComponent } from './paginas/cart/cart.component';
+import { PagoComponent } from './paginas/pago/pago.component';
 
 const routes: Routes = [
 
@@ -56,6 +57,7 @@ const routes: Routes = [
  {path:'registro',component:RegistroComponent},
  {path:'vender',component:VenderComponent},
  {path:'cart',component:CartComponent},
+ {path:'pago',component:PagoComponent},
 
  {path:'usuario',component:UsuarioComponent},
 
