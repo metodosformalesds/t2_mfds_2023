@@ -30,7 +30,7 @@ export class MiBalanceComponent implements OnInit {
   
 
     // Llama a la función getHistorial() del servicio para obtener el historial
-    this.balanceService.getHistorial(2).subscribe(data => {
+    this.balanceService.getHistorial(1).subscribe(data => {
       this.historial = data;
       console.log(this.historial);
       
