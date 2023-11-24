@@ -1,19 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
 img {
-  width: 73vh;
-  height: 60vh;
-  margin-left: 20%;
+  width: 60vh;
+  height: 70vh;
+  margin-left: 10%;
   
    }
   
 input {
+  
   width: 40rem;
  
 }
   
   .container {
-      display: flex;
-      background-color: #F5F2F2;
-    }
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem;
+    display: flex;
+    background-color: #F5F2F2;
+  }
   
     .left-element {
       /* Estilos para el elemento izquierdo */
