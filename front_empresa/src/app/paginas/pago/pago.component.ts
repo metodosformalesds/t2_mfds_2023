@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
  selector: 'app-pago',
  templateUrl: './pago.component.html',
@@ -38,3 +39,4 @@ calcularTotal(): void {
   this.total = this.productos.reduce((acumulador, producto) => acumulador + producto.cantidad * producto.precio, 0);
 }
 }
+export class FormFieldOverviewExample {}
