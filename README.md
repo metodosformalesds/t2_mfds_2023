@@ -7,4 +7,7 @@ SRS
 
 https://docs.google.com/document/d/1RO5X6WLPYvAUYoeVgLyFwqY3xCw0-WQ8/edit?usp=sharing&ouid=108237671995219324438&rtpof=true&sd=true
 
+Deployment
+ecbooks.netlify.app
+
 t1_mfds_2023
