@@ -10,6 +10,6 @@ https://docs.google.com/document/d/1RO5X6WLPYvAUYoeVgLyFwqY3xCw0-WQ8/edit?usp=sh
 Deployment
 
 
-ecbooks.netlify.app
+https://ecbooks.netlify.app/inicio
 
 t1_mfds_2023
